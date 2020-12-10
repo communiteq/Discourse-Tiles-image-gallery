@@ -63,6 +63,8 @@ $.fn.autoTiles = function() {
 
 // Tiles I18n Translations
 let currentLocale = I18n.currentLocale();
+if(currentLocale==="en_US") 
+  { currentLocale = "en" }
 I18n.translations[currentLocale].js.composer.tiles_add_images_prompt =
   settings.Tiles_add_images_prompt;
 I18n.translations[currentLocale].js.tiles_gallery_button =
