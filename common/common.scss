@@ -45,6 +45,30 @@ $tiles-padding: 3px !default;
     align-items: center;
     justify-content: center;
 
+    .tiles-zoom {
+      transition: opacity 0.5s ease-in-out;
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      flex: 1;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        color: $primary-low;
+        height: 1.5em;
+        width: 1.5em;
+      }
+    }
+
+    &:hover .tiles-zoom {
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.75);
+    }
+
     &:before {
       display: flex;
       opacity: 0;
